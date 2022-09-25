@@ -1,0 +1,18 @@
+<a onmouseenter="show()" href="#" class="wigCard">
+       <div class="block  w-[300px] px-3 py-2 md:pl-2">
+           <div>
+               <img src="${item.img}" alt="" class="wigContent rounded-lg">
+           </div>
+           <div class="flex justify-start items-center pt-3">
+               <div class="block space-y-2">
+                   <div class="text-sm space-y-1 font-normal">
+                       <h1>${item.title}</h1>
+                       <h1>${item.length}</h1>
+                       <h1>${item.config}</h1>
+                       <h1>${item.type}</h1>
+                   </div>
+                   <h1 class="text-base font-semibold">${item.price}</h1>
+               </div>
+           </div>
+       </div>
+       </a>

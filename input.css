@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    body {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+}
+
+body{
+    font-family: poppins , sans-serif;
+    background: #eee;
+}
+.logopic{
+    height: 80px;
+    width:200px;
+    padding-top: 5px;
+}
+.auto{
+    flex: auto;
+}
+/* 
+.currency{
+    display: flex;
+    transform: rotate(-90deg);
+} */
+i{
+    font-size: 18px;
+    font-weight: 300;
+}
+.navitems::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #811331;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+  }
+  
+  .navitems:hover:after {
+    width: 100%;
+  }
+  
+.sidebg img{
+  max-width: 100%;
+  height: 100vh;
+  transform: translateX(20%);
+  object-fit: cover;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  z-index: -10;
+  filter: brightness(50%);
+}
+
+.sidebg{
+    overflow-x: hidden;
+}
+.box {
+    border-radius: 30% 70% 9% 91% / 54% 40% 60% 46% ;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background: #eee;
+}
+.textbg{
+    background: url("./img/textbg.jpg") 50% 50%;
+    background-size: cover;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+}
+.scrolldown::before{
+    display: inline-block;
+    content: "";
+    border-top: 1px solid #811331;
+    width: 50px;
+    margin: 0 10px 0 10px;
+    transform: translateY(10px);
+}
+.mobile-icon i{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 100;
+
+}
+
+.video video{
+    width: 300px;
+}
+
+.secondbg{
+    background:url(./img/secondbackground.jpg);
+    height: 90vh;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+.whybg{
+    background-color: rgba(129, 19, 49,0.7);
+  
+}
+
+.animated{
+    filter: contrast(400%);
+    opacity: .2;
+    width:200px;
+    height: 200px;
+}
+
+
+
+.aboutimg::after{
+    content: "";
+    display: flex;
+    position:relative;
+    bottom: 240px;
+    left: 20px;
+    height: 260px;
+    width: 200px;
+    /* transform: scale(.75); */
+    background: #811331;
+    z-index: -1;
+    /* margin: 0 auto; */
+}
+
+.about2img::after{
+    content: "" ;
+    display: flex;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 0;
+    border-radius: 0.5rem;
+    z-index: -1;
+    /* top: 100px; */
+    bottom: 170px;
+    right: 100px;
+    background: rgba(129, 19, 49, .7);
+    
+}
+
+.wigContent{
+    width: 100%;
+    max-width: 275px;
+    /* max-width: 100%; */
+    height: 400px;
+    /* width: 275px; */
+   
+}
+
+.wigContent1{
+    width: 100%;
+    max-width: 275px;
+    /* max-width: 100%; */
+    height: 320px;
+    /* width: 275px; */
+   
+}
+.wigBtn{
+    background: rgba(255,255,255, .6);
+}
+.WigDisplaySec{
+ animation: wigs .25s ease-in-out;
+}
+
+@keyframes wigs {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* .hide{
+    overflow: hidden;
+} */
+
+
+@media  screen and (max-width:768px) {
+    .sidebg img{
+        max-width:300px;
+        height: 100vh;
+        transform: translateX(10%);
+        object-fit: cover;
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        z-index: -10;
+        filter: brightness(30%);
+      } 
+    .logopic{
+        height: 80px;
+        width:150px;
+        padding-top: 5px;
+    }
+    .aboutimg::after{
+        content: "";
+        display: flex;
+        position:absolute;
+        top: 20px;
+        left: 20px;
+        height: 260px;
+        width: 200px;
+        /* transform: scale(.75); */
+        background: #811331;
+        z-index: -1;
+        /* margin: 0 auto; */
+    }
+    .about2img::after{
+        content: "" ;
+        display: flex;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        border: 0;
+        border-radius: 0.5rem;
+        z-index: -1;
+        /* top: 100px; */
+        top: 200px;
+        right: -20px;
+        background: rgba(129, 19, 49, .7);
+        
+    }
+}
